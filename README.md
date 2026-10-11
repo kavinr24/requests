@@ -1,5 +1,7 @@
 # Requests
 
+> **Security Note:** `proxy_bypass_registry` in `src/requests/utils.py` used an unanchored `re.match`, allowing a `ProxyOverride` entry like `google.com` to also match `google.com.evil.com` and bypass the proxy. This has been fixed to use `fnmatch` (matching CPython's behavior), so patterns are now anchored at both ends while preserving wildcard support.
+
 [![Version](https://img.shields.io/pypi/v/requests.svg?maxAge=86400)](https://pypi.org/project/requests/)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/requests.svg)](https://pypi.org/project/requests)
 [![Downloads](https://static.pepy.tech/badge/requests/month)](https://pepy.tech/project/requests)
