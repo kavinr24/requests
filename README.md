@@ -74,3 +74,5 @@ git config --global fetch.fsck.badTimezone ignore
 ---
 
 [![Kenneth Reitz](https://raw.githubusercontent.com/psf/requests/main/ext/kr.png)](https://kennethreitz.org) [![Python Software Foundation](https://raw.githubusercontent.com/psf/requests/main/ext/psf.png)](https://www.python.org/psf)
+                httpbin("delay/3"), timeout=2.0, stream=True
+            requests.get(httpbin("delay/1"), timeout=timeout)
